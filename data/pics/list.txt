@@ -1,0 +1,28 @@
+data/pics/chars.tga
+16 16 1
+data/pics/menu.tga
+60 256 1
+data/pics/guistuff.tga
+64 64 1
+data/pics/rod.tga
+16 16 1
+data/pics/bubble.tga
+32 32 1
+data/pics/brick.tga
+32 32 1
+data/pics/digits.tga
+32 16 1
+data/pics/buttons.tga
+64 64 1
+data/pics/moregames.tga
+117 128 1
+data/pics/wall.tga
+90 320 1
+data/pics/sky.tga
+100 320 1
+data/pics/logo.tga
+107 256 1
+data/pics/bg.tga
+512 256 1
+data/pics/howto.tga
+397 300 1

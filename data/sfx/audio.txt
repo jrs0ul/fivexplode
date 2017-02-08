@@ -1,0 +1,4 @@
+gui_click.ogg
+bounce.ogg
+explode.ogg
+warning.ogg
