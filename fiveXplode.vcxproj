@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{84DBB10F-01D8-41D6-AC58-0EF6344FE0DA}</ProjectGuid>
+    <RootNamespace>fiveXplode</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);c:\sdl\include\;c:\openal\include;c:\vorbis\include\;c:\ogg\include\;c:\curl\include\;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;;c:\sdl\lib\;c:\openal\libs\win32\;c:\curl\lib\;c:\ogg\lib\;c:\vorbis\lib\;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);c:\sdl\include\;c:\openal\include;c:\vorbis\include\;c:\ogg\include\;c:\curl\include\;</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86;c:\sdl\lib\;c:\openal\libs\win32\;c:\curl\lib\;c:\ogg\lib\;c:\vorbis\lib\;</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\audio\OggStream.cpp" />
+    <ClCompile Include="src\audio\SoundSystem.cpp" />
+    <ClCompile Include="src\CppSingleton.cpp" />
+    <ClCompile Include="src\Extensions.cpp" />
+    <ClCompile Include="src\externals.cpp" />
+    <ClCompile Include="src\FindPath.cpp" />
+    <ClCompile Include="src\Grid.cpp" />
+    <ClCompile Include="src\gui\Button.cpp" />
+    <ClCompile Include="src\gui\MenuLoader.cpp" />
+    <ClCompile Include="src\gui\MenuStruct.cpp" />
+    <ClCompile Include="src\gui\OnScreenBoard.cpp" />
+    <ClCompile Include="src\gui\Scrollbar.cpp" />
+    <ClCompile Include="src\gui\SelectMenu.cpp" />
+    <ClCompile Include="src\gui\Text.cpp" />
+    <ClCompile Include="src\gui\YesNoDialog.cpp" />
+    <ClCompile Include="src\HighScore.cpp" />
+    <ClCompile Include="src\Image.cpp" />
+    <ClCompile Include="src\mainer.cpp" />
+    <ClCompile Include="src\Matrix.cpp" />
+    <ClCompile Include="src\SDLVideo.cpp" />
+    <ClCompile Include="src\SysConfig.cpp" />
+    <ClCompile Include="src\TextureLoader.cpp" />
+    <ClCompile Include="src\Threads.cpp" />
+    <ClCompile Include="src\Utils.cpp" />
+    <ClCompile Include="src\Vectors.cpp" />
+    <ClCompile Include="src\VertexObject.cpp" />
+    <ClCompile Include="src\Xml.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\audio\OggStream.h" />
+    <ClInclude Include="src\audio\SoundSystem.h" />
+    <ClInclude Include="src\CppSingleton.h" />
+    <ClInclude Include="src\DArray.h" />
+    <ClInclude Include="src\Extensions.h" />
+    <ClInclude Include="src\externals.h" />
+    <ClInclude Include="src\FindPath.h" />
+    <ClInclude Include="src\Grid.h" />
+    <ClInclude Include="src\gui\Button.h" />
+    <ClInclude Include="src\gui\MenuLoader.h" />
+    <ClInclude Include="src\gui\MenuStruct.h" />
+    <ClInclude Include="src\gui\OnScreenBoard.h" />
+    <ClInclude Include="src\gui\Scrollbar.h" />
+    <ClInclude Include="src\gui\SelectMenu.h" />
+    <ClInclude Include="src\gui\Text.h" />
+    <ClInclude Include="src\gui\YesNoDialog.h" />
+    <ClInclude Include="src\HighScore.h" />
+    <ClInclude Include="src\Image.h" />
+    <ClInclude Include="src\Matrix.h" />
+    <ClInclude Include="src\SDLVideo.h" />
+    <ClInclude Include="src\SysConfig.h" />
+    <ClInclude Include="src\TextureLoader.h" />
+    <ClInclude Include="src\Threads.h" />
+    <ClInclude Include="src\TouchData.h" />
+    <ClInclude Include="src\Utils.h" />
+    <ClInclude Include="src\Vectors.h" />
+    <ClInclude Include="src\VertexObject.h" />
+    <ClInclude Include="src\Xml.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
